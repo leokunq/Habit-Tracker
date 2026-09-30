@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@theme{
+  /* Fonts */
+  --font-sans: "Helvetica", "Arial", sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  /* FACET colors */
+  --color-surface: #1A1A1A;
+  --color-compo: #262626;
+
+  --text-color: #A3A3A3;
+  
+}
