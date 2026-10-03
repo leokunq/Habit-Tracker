@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddTasks = () => {
+const AddTasks = ({ onAddTask }) => {
   const [showForm, setShowForm] = useState(false);
   const [taskName, setTaskName] = useState("");
 
@@ -15,6 +15,7 @@ const AddTasks = () => {
     console.log("Task submitted:", taskName);
     setTaskName("");
     setShowForm(false);
+    onAddTask(taskName);
   }
 
   return (
@@ -30,7 +31,7 @@ const AddTasks = () => {
 
       {showForm && (
         <div className="fixed inset-0 z-20 flex items-center justify-center "
-        onclick={() => setShowForm(false)}>
+        onClick={() => setShowForm(false)}>
           <div
             className="w-100 h-50 bg-white/10 backdrop-blur-lg transition-all duration-200  rounded-lg border border-amber-50 px-3"
             onClick={(e) => e.stopPropagation()}
@@ -73,3 +74,4 @@ const AddTasks = () => {
 };
 
 export default AddTasks;
+    
